@@ -7,11 +7,11 @@ app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
 app.get("/", (req, res) => {
-  res.send(`<h1>首頁<h1>`);
+  res.render("index");
 });
 
 app.get("/about", (req, res) => {
-  res.send(`<h1>About<h1>`);
+  res.render('index');
 });
 
 app.get("/portfolio", (req, res) => {
