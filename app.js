@@ -10,16 +10,8 @@ app.get("/", (req, res) => {
   res.render("index");
 });
 
-app.get("/about", (req, res) => {
-  res.render('index');
-});
-
-app.get("/portfolio", (req, res) => {
-  res.send(`<h1>Portfolio<h1>`);
-});
-
-app.get("/contact", (req, res) => {
-  res.send(`<h1>Contact<h1>`);
+app.get("/:page", (req, res) => {
+  res.render("page", { pageH1: req.params.page });
 });
 
 app.listen(port);
