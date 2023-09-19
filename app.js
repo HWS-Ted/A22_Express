@@ -10,4 +10,16 @@ app.get("/", (req, res) => {
   res.send(`<h1>首頁<h1>`);
 });
 
+app.get("/about", (req, res) => {
+  res.send(`<h1>About<h1>`);
+});
+
+app.get("/portfolio", (req, res) => {
+  res.send(`<h1>Portfolio<h1>`);
+});
+
+app.get("/contact", (req, res) => {
+  res.send(`<h1>Contact<h1>`);
+});
+
 app.listen(port);
